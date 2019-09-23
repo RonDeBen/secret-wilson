@@ -1,24 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GermaniaOne-Regular.ttf">
+            <string>GermaniaOne-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Game View Controller-->
+        <!--SignUpViewController-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignUpViewController" id="BV1-FR-VrT" customClass="LoginScreenViewController" customModule="secret_wilson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-4W-cvd">
+                                <rect key="frame" x="31" y="49" width="352" height="163.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-ja-7Pd">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="163.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHC-e5-U6g">
+                                        <rect key="frame" x="176" y="0.0" width="176" height="163.5"/>
+                                        <string key="text">Secret
+Wilson</string>
+                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="50"/>
+                                        <color key="textColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.98039215686274506" green="0.81176470588235294" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="shadowColor" red="0.031372549020000001" green="0.37254901959999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be In The Moment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjq-a6-uNw">
+                                <rect key="frame" x="118.5" y="217.5" width="177.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="25"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.031372549020000001" green="0.37254901959999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-0a-nH7" userLabel="AvatarButton">
+                                <rect key="frame" x="84.5" y="284" width="245" height="245.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e8F-0a-nH7" secondAttribute="height" multiplier="1:1" id="Crs-Ec-iHI"/>
+                                </constraints>
+                                <state key="normal" image="CirclePlusIcon"/>
+                                <connections>
+                                    <action selector="circlePlusButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="BDJ-YT-giD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select An Avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQO-4O-p3E">
+                                <rect key="frame" x="109" y="539.5" width="196.5" height="37"/>
+                                <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="30"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.031372549020000001" green="0.37254901959999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nickname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-ck-ldQ" userLabel="NicknameButton">
+                                <rect key="frame" x="31" y="708" width="352" height="63"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkz-zN-8fG">
+                                <rect key="frame" x="31" y="781" width="352" height="71"/>
+                                <color key="backgroundColor" red="0.28627450980392155" green="0.74509803921568629" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="50"/>
+                                <color key="tintColor" red="0.031372549020000001" green="0.37254901959999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Find a Room">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.81176470590000005" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findARoomButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="KP0-h5-VQx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mkz-zN-8fG" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" constant="-10" id="E7k-hr-dTY"/>
+                            <constraint firstItem="mkz-zN-8fG" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="FGI-uJ-xGG"/>
+                            <constraint firstItem="mkz-zN-8fG" firstAttribute="top" secondItem="mxS-ck-ldQ" secondAttribute="bottom" constant="10" id="GO5-l3-ubW"/>
+                            <constraint firstItem="EQO-4O-p3E" firstAttribute="top" secondItem="e8F-0a-nH7" secondAttribute="bottom" constant="10" id="Jbi-YP-dZt"/>
+                            <constraint firstItem="gjq-a6-uNw" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="K0Z-BR-thj"/>
+                            <constraint firstItem="xBR-4W-cvd" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="KtZ-vu-05s"/>
+                            <constraint firstItem="mxS-ck-ldQ" firstAttribute="width" secondItem="3se-qz-xqx" secondAttribute="width" multiplier="0.85" id="Nyq-Pp-PoN"/>
+                            <constraint firstItem="gjq-a6-uNw" firstAttribute="top" secondItem="xBR-4W-cvd" secondAttribute="bottom" constant="5" id="O8e-Fw-m2R"/>
+                            <constraint firstItem="e8F-0a-nH7" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="YGc-6i-SSu"/>
+                            <constraint firstItem="e8F-0a-nH7" firstAttribute="top" secondItem="gjq-a6-uNw" secondAttribute="bottom" multiplier="1.1" constant="10" id="bOc-5O-gyU"/>
+                            <constraint firstItem="mxS-ck-ldQ" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="gpv-Ms-OH3"/>
+                            <constraint firstItem="xBR-4W-cvd" firstAttribute="width" secondItem="4qk-I5-YsI" secondAttribute="width" multiplier="0.85" id="iJi-Qt-5Y2"/>
+                            <constraint firstItem="mkz-zN-8fG" firstAttribute="width" secondItem="3se-qz-xqx" secondAttribute="width" multiplier="0.85" id="irh-15-35F"/>
+                            <constraint firstItem="EQO-4O-p3E" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="m71-YW-XR6"/>
+                            <constraint firstItem="xBR-4W-cvd" firstAttribute="height" secondItem="4qk-I5-YsI" secondAttribute="height" multiplier="0.2" id="mLe-6Z-LP1"/>
+                            <constraint firstItem="xBR-4W-cvd" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="5" id="qOb-Nf-GOh"/>
+                            <constraint firstItem="e8F-0a-nH7" firstAttribute="height" secondItem="4qk-I5-YsI" secondAttribute="height" multiplier="0.3" id="yE0-o7-ccj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarButton" destination="e8F-0a-nH7" id="XGS-YU-hw2"/>
+                        <outlet property="findARoomToNicknameConstraint" destination="GO5-l3-ubW" id="Ic3-a4-yq5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CardLogo" width="93" height="74.5"/>
+        <image name="CirclePlusIcon" width="262.5" height="263"/>
+    </resources>
 </document>
